@@ -5,5 +5,5 @@ variable "region" {
 
 variable "project" {
 	description = "The name of the gcp project and the base name for all resources"
-	default = "rlt-test"
+	default = "rlt-test-286909"
 }

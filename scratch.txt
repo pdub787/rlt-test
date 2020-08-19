@@ -1,0 +1,20 @@
+
+gcloud auth activate-service-account rlt-terraform@rlt-test-286909.iam.gserviceaccount.com --key-file=/Users/patrick/rlt-test/rlt-test-286909-a43e681c84cd.json --project=rlt-test
+
+
+gcloud container clusters get-credentials rlt-test-286909-gke-cluster --zone us-central1-a
+
+rlt-test-286909
+
+
+
+docker build -t us.gcr.io/rlt-test-286909/rlt-test .
+
+docker push us.gcr.io/rlt-test-286909/rlt-test
+
+
+
+
+kubectl create namespace rlt-test
+helm install rlt-test charts/rlt-test/
+kubectl get service rlt-test

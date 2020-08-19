@@ -1,7 +1,7 @@
 provider "google" {
-	credentials = file("account.json")
+	credentials = file("rlt-test-286909-0e2235e45b7f.json")
 	project = var.project
-	region = var.region 
+	region = var.region
 }
 
 # Create the kubernetes cluster
